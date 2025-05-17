@@ -1,0 +1,17 @@
+// just a list of things
+
+// apt
+nim
+go
+winmg-64
+rustup
+
+// nim
+dnsclient
+winim
+zippy
+nimcrypto
+base32
+
+// go
+(handled in go.mod)
