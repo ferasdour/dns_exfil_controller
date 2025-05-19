@@ -14,8 +14,15 @@ import (
 )
 
 func addbase32padding(s string) string {
+	for i := 0; i < 3; i++ {
 	missing := len(s) % 8
-	if missing !=0 {s+=strings.Repeat("=",8-missing)}
+	_, err := base32.StdEncoding.DecodeString(s)
+	if err != nil {
+		s+=strings.Repeat("=",8-missing)
+	} else {
+		break
+		}
+	}
 	return s
 }
 
